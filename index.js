@@ -1,4 +1,7 @@
-import express from "express"
+import express from "express";
+import mongoose from "mongoose";
+import 'dotenv/config';
+import { dbConnection } from "./config/db.js";
 
 
 
@@ -8,6 +11,7 @@ const app = express();
 
 // Use Router
 app.use(express.json());
+dbConnection();
 
 
 
